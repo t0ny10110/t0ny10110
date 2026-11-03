@@ -1,4 +1,3 @@
-
 name: Koi
 
 on:
@@ -18,16 +17,38 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: t0ny10110/git-koi@main
+
+      - uses: yalongwastaken/git-koi@v1
         with:
           body: white
-          output-dir: koi
+          output-dir: koi-white
+
+      - uses: yalongwastaken/git-koi@v1
+        with:
+          body: black
+          output-dir: koi-black
+
+      - uses: yalongwastaken/git-koi@v1
+        with:
+          body: asagi
+          output-dir: koi-asagi
+
+      - uses: yalongwastaken/git-koi@v1
+        with:
+          body: gold
+          output-dir: koi-gold
+
+      - uses: yalongwastaken/git-koi@v1
+        with:
+          body: platinum
+          output-dir: koi-platinum
+
       - name: Commit the koi if it changed
         shell: bash
         run: |
-          git add koi/koi.gif
+          git add koi-white/koi.gif koi-black/koi.gif koi-asagi/koi.gif koi-gold/koi.gif koi-platinum/koi.gif
           if git diff --cached --quiet; then
-            echo "The koi is unchanged; nothing to commit."
+            echo "The koi are unchanged; nothing to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
