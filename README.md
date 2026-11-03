@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="koi-white/koi.gif" width="80" alt="White koi">
-  <img src="koi-black/koi.gif" width="80" alt="Black koi">
-  <img src="koi-asagi/koi.gif" width="80" alt="Asagi koi">
-  <img src="koi-gold/koi.gif" width="80" alt="Gold koi">
-  <img src="koi-platinum/koi.gif" width="80" alt="Platinum koi">
+  <img src="koi-white/koi.gif" width="120" alt="White koi">
+  <img src="koi-black/koi.gif" width="120" alt="Black koi">
+  <img src="koi-asagi/koi.gif" width="120" alt="Asagi koi">
+  <img src="koi-gold/koi.gif" width="120" alt="Gold koi">
+  <img src="koi-platinum/koi.gif" width="120" alt="Platinum koi">
 </p>
 <!--
 **t0ny10110/t0ny10110** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
