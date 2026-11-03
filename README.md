@@ -1,4 +1,4 @@
-## Hi there 👋
+
 <img src="koi/koi.gif" width="256" alt="My koi">
 <!--
 **t0ny10110/t0ny10110** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
