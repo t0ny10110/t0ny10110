@@ -18,30 +18,20 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
+      # Downloads the renderer and collects the account snapshot once.
       - uses: yalongwastaken/git-koi@v1
         with:
           body: white
           output-dir: koi-white
 
-      - uses: yalongwastaken/git-koi@v1
-        with:
-          body: black
-          output-dir: koi-black
-
-      - uses: yalongwastaken/git-koi@v1
-        with:
-          body: asagi
-          output-dir: koi-asagi
-
-      - uses: yalongwastaken/git-koi@v1
-        with:
-          body: gold
-          output-dir: koi-gold
-
-      - uses: yalongwastaken/git-koi@v1
-        with:
-          body: platinum
-          output-dir: koi-platinum
+      # Reuse the same snapshot and renderer for the remaining colors.
+      - name: Render remaining koi
+        shell: bash
+        run: |
+          git-koi render "$RUNNER_TEMP/koi-snapshot.json" --output-dir koi-black --body black
+          git-koi render "$RUNNER_TEMP/koi-snapshot.json" --output-dir koi-asagi --body asagi
+          git-koi render "$RUNNER_TEMP/koi-snapshot.json" --output-dir koi-gold --body gold
+          git-koi render "$RUNNER_TEMP/koi-snapshot.json" --output-dir koi-platinum --body platinum
 
       - name: Commit the koi if it changed
         shell: bash
